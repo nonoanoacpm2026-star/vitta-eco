@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b2a">
+<title>VITTA ECO • 9º A</title>
+<style>
+:root{--green:#16834b;--dark:#073b2a;--lime:#b7df5a;--cream:#f6f8ee;--white:#fff;--text:#29483d;--shadow:0 12px 30px rgba(7,59,42,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark)}
+header{background:linear-gradient(135deg,var(--dark),var(--green));color:white;padding:18px 6%;position:sticky;top:0;z-index:10;box-shadow:var(--shadow)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1150px;margin:auto}
+.brand{font-size:1.2rem;font-weight:900;letter-spacing:.7px}
+.brand span{color:var(--lime)}
+nav a{color:white;text-decoration:none;margin-left:15px;font-weight:700}
+.page{display:none;min-height:calc(100vh - 75px)}
+.page.active{display:block}
+.hero{padding:80px 6%;background:radial-gradient(circle at 85% 20%,#c9e878 0,transparent 27%),linear-gradient(180deg,#eff7dc,#f6f8ee)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center;max-width:1150px;margin:auto}
+.badge{display:inline-block;background:#dff0ad;color:var(--dark);padding:8px 14px;border-radius:99px;font-weight:800}
+h1{font-size:clamp(3rem,8vw,6rem);line-height:.88;margin:18px 0}
+h1 span{color:var(--green)}
+.hero p{font-size:1.12rem;line-height:1.65;max-width:680px;color:var(--text)}
+.btn{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:14px 20px;border-radius:12px;font-weight:800;margin-top:10px;border:0;cursor:pointer;transition:.15s}
+.btn:active,.touch:active{transform:scale(.96)}
+.logo-card{background:white;border-radius:28px;padding:38px;text-align:center;box-shadow:var(--shadow);border:2px solid #dcebbf}
+.logo{font-size:5rem;font-weight:1000;color:var(--green)}
+.logo small{display:block;font-size:1rem;letter-spacing:3px;color:var(--dark)}
+section{padding:60px 6%}.container{max-width:1150px;margin:auto}
+h2{font-size:2.2rem;margin:0 0 12px}.sub{color:#507064;margin-bottom:30px;line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:white;border-radius:20px;padding:24px;box-shadow:var(--shadow);border:1px solid #e0ead6;transition:.18s}
+.card:hover{transform:translateY(-4px)}
+.touch{display:block;width:100%;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit;padding:0;text-decoration:none}
+.icon{font-size:2.1rem}.card h3{margin:12px 0 8px}.card p{color:#587067;line-height:1.5}
+.action{display:inline-block;margin-top:10px;padding:9px 12px;border-radius:10px;background:#e7f2c9;color:var(--dark);font-size:.85rem;font-weight:800}
+.about{background:var(--dark);color:white}.about .sub{color:#cde2d6}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stat{background:rgba(255,255,255,.09);padding:24px;border-radius:18px}.stat strong{font-size:2.3rem;color:var(--lime);display:block;margin-bottom:5px}
+.info-page{max-width:900px;margin:auto;padding:55px 6% 70px}
+.info-box{background:white;border-radius:24px;padding:32px;box-shadow:var(--shadow);line-height:1.7}
+.info-icon{font-size:3.5rem}.info-box h1{font-size:clamp(2.5rem,7vw,4.5rem);margin:10px 0 22px}.info-box h2{font-size:1.5rem;margin-top:28px}.info-box p{color:var(--text)}
+.back{display:inline-block;margin-top:25px;background:var(--green);color:white;text-decoration:none;padding:13px 18px;border-radius:12px;font-weight:800;cursor:pointer;border:0}
+footer{background:#04271d;color:#cde2d6;padding:30px 6%;text-align:center}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}nav a{display:none}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}section{padding:48px 5%}.info-box{padding:24px}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="brand">VITTA <span>ECO</span> • 9º A</div>
+<div>
+<a href="#inicio" onclick="showPage('home')">Início</a>
+<a href="#areas" onclick="showPage('home')">Áreas</a>
+<a href="#projeto" onclick="showPage('home')">Projeto</a>
+</div>
+</nav>
+</header>
+
+<main>
+<div id="home" class="page active">
+<section class="hero" id="inicio">
+<div class="hero-grid">
+<div>
+<div class="badge">🌱 Projeto escolar • 9º A</div>
+<h1>VITTA <span>ECO</span></h1>
+<p>Um projeto criado pelo 9º A para transformar ideias em ação, desenvolver habilidades e aprender na prática através de organização, liderança, marketing e trabalho em equipe.</p>
+<a class="btn" href="#areas">Conheça o projeto ↓</a>
+</div>
+<div class="logo-card">
+<div class="logo">VE<small>VITTA ECO • 9º A</small></div>
+<p>♻️ Sustentabilidade • 💡 Criatividade • 🤝 Cooperação</p>
+</div>
+</div>
+</section>
+
+<section id="areas">
+<div class="container">
+<h2>Áreas do VITTA ECO</h2>
+<p class="sub">Toque em uma área para abrir uma página de informações.</p>
+<div class="grid">
+
+<div class="card">
+<button class="touch" onclick="showPage('marketing')">
+<div class="icon">📣</div><h3>Marketing</h3>
+<p>Comunicação, divulgação, campanhas e identidade do VITTA ECO.</p>
+<span class="action">👆 Toque para abrir</span>
+</button>
+</div>
+
+<div class="card">
+<button class="touch" onclick="showPage('lideranca')">
+<div class="icon">👑</div><h3>Liderança</h3>
+<p>Organização das equipes, decisões, metas e acompanhamento.</p>
+<span class="action">👆 Toque para abrir</span>
+</button>
+</div>
+
+<div class="card">
+<button class="touch" onclick="showPage('estoque')">
+<div class="icon">📦</div><h3>Estoque</h3>
+<p>Controle de materiais, entradas, saídas e recursos.</p>
+<span class="action">👆 Toque para abrir</span>
+</button>
+</div>
+
+<div class="card">
+<button class="touch" onclick="showPage('organizacao')">
+<div class="icon">🗂️</div><h3>Organização Geral</h3>
+<p>Planejamento, registros, tarefas e apoio ao projeto.</p>
+<span class="action">👆 Toque para abrir</span>
+</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Como funciona?</h2>
+<p class="sub">O projeto transforma ideias em experiências práticas.</p>
+<div class="grid">
+<div class="card"><div class="icon">💡</div><h3>1. Criar</h3><p>As equipes apresentam ideias e definem objetivos.</p></div>
+<div class="card"><div class="icon">📝</div><h3>2. Planejar</h3><p>As tarefas são distribuídas e os recursos organizados.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>3. Executar</h3><p>O 9º A coloca as ideias em prática.</p></div>
+<div class="card"><div class="icon">🏆</div><h3>4. Conquistar</h3><p>O trabalho gera experiência, habilidades e reconhecimento.</p></div>
+</div>
+</div>
+</section>
+
+<section class="about" id="projeto">
+<div class="container">
+<h2>Sobre o projeto</h2>
+<p class="sub">O VITTA ECO é uma experiência de aprendizagem do 9º A que une empreendedorismo, sustentabilidade e desenvolvimento de habilidades.</p>
+<div class="stats">
+<div class="stat"><strong>9º A</strong>Turma do projeto</div>
+<div class="stat"><strong>♻️</strong>Foco sustentável</div>
+<div class="stat"><strong>🤝</strong>Trabalho em equipe</div>
+</div>
+</div>
+</section>
+</div>
+
+<!-- PÁGINAS INTERNAS, TODAS DENTRO DO MESMO HTML -->
+
+<div id="marketing" class="page">
+<div class="info-page"><div class="info-box">
+<div class="info-icon">📣</div><h1>Marketing</h1>
+<p>Área responsável pela comunicação e divulgação do VITTA ECO.</p>
+<h2>O que é?</h2><p>A equipe de Marketing apresenta o projeto para a comunidade escolar e ajuda a construir uma identidade que represente o 9º A.</p>
+<h2>Principais funções</h2><p>Criar cartazes, campanhas, textos, chamadas, apresentações e conteúdos de divulgação. Também pode registrar as ações do projeto por fotos e vídeos, quando autorizado.</p>
+<h2>Habilidades desenvolvidas</h2><p>Criatividade, comunicação, escrita, planejamento, organização de ideias e trabalho em equipe.</p>
+<h2>Como trabalhar</h2><p>Antes de divulgar qualquer informação, a equipe deve conferir os dados e alinhar a mensagem com a organização do projeto.</p>
+<h2>Objetivo</h2><p>Fazer com que as pessoas conheçam o VITTA ECO, entendam suas ações e tenham vontade de participar.</p>
+<button class="back" onclick="showPage('home')">← Voltar ao início</button>
+</div></div>
+</div>
+
+<div id="lideranca" class="page">
+<div class="info-page"><div class="info-box">
+<div class="info-icon">👑</div><h1>Liderança</h1>
+<p>Área que ajuda a coordenar pessoas, tarefas e objetivos.</p>
+<h2>O que é?</h2><p>Liderança é a organização do trabalho coletivo. Liderar envolve ouvir, orientar, acompanhar e incentivar os integrantes.</p>
+<h2>Principais funções</h2><p>Distribuir tarefas, acompanhar prazos, organizar reuniões, verificar resultados e ajudar as equipes diante de dificuldades.</p>
+<h2>Habilidades desenvolvidas</h2><p>Responsabilidade, comunicação, planejamento, tomada de decisões, cooperação e resolução de problemas.</p>
+<h2>Como trabalhar</h2><p>Uma boa liderança explica as tarefas com clareza, respeita os integrantes e procura soluções em conjunto.</p>
+<h2>Objetivo</h2><p>Manter as equipes alinhadas para que o projeto avance de maneira organizada e todos possam contribuir.</p>
+<button class="back" onclick="showPage('home')">← Voltar ao início</button>
+</div></div>
+</div>
+
+<div id="estoque" class="page">
+<div class="info-page"><div class="info-box">
+<div class="info-icon">📦</div><h1>Estoque</h1>
+<p>Área responsável pelo controle e organização dos materiais do projeto.</p>
+<h2>O que é?</h2><p>O Estoque acompanha os recursos utilizados pelo VITTA ECO e mantém registros para saber o que existe e o que precisa ser reposto.</p>
+<h2>Principais funções</h2><p>Registrar materiais, conferir quantidades, organizar itens e controlar entradas, saídas, empréstimos e devoluções.</p>
+<h2>Habilidades desenvolvidas</h2><p>Organização, atenção, responsabilidade, registro de informações, matemática básica e planejamento.</p>
+<h2>Como trabalhar</h2><p>Todo movimento de material deve ser registrado. Os itens devem ficar identificados e organizados para facilitar a conferência.</p>
+<h2>Objetivo</h2><p>Garantir que os recursos sejam utilizados de forma responsável e estejam disponíveis quando as equipes precisarem.</p>
+<button class="back" onclick="showPage('home')">← Voltar ao início</button>
+</div></div>
+</div>
+
+<div id="organizacao" class="page">
+<div class="info-page"><div class="info-box">
+<div class="info-icon">🗂️</div><h1>Organização Geral</h1>
+<p>Área que ajuda a conectar as diferentes partes do VITTA ECO.</p>
+<h2>O que é?</h2><p>A Organização Geral acompanha documentos, cronogramas, tarefas e informações importantes para manter o projeto funcionando.</p>
+<h2>Principais funções</h2><p>Montar cronogramas, organizar registros, acompanhar tarefas, apoiar eventos e manter as informações importantes reunidas.</p>
+<h2>Habilidades desenvolvidas</h2><p>Planejamento, disciplina, gestão do tempo, comunicação, atenção aos detalhes e trabalho em equipe.</p>
+<h2>Como trabalhar</h2><p>As tarefas devem ter responsáveis e prazos definidos. Registros claros ajudam a turma a saber o que já foi feito.</p>
+<h2>Objetivo</h2><p>Manter uma rotina organizada, facilitando o trabalho de todas as equipes do VITTA ECO.</p>
+<button class="back" onclick="showPage('home')">← Voltar ao início</button>
+</div></div>
+</div>
+</main>
+
+<footer>
+<strong>VITTA ECO • 9º A</strong><br>
+Aprender • Criar • Organizar • Transformar
+</footer>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ const page=document.getElementById(id);
+ if(page){page.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+}
+window.addEventListener('hashchange',function(){
+ if(location.hash==='#areas'||location.hash==='#inicio'||location.hash==='#projeto') showPage('home');
+});
+</script>
+</body>
+</html>
